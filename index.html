@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>verflixte 7</title>
+    <script src="main.js"></script>
 
 </head>
 <body>
@@ -14,11 +15,12 @@ Anzahl an Würfen zu übertreffen...Es sei denn, es kommt ihm EINE Zahl in die Q
 <p id="W1"></p>
 <p id="W2"></p>
 
-
-<p id="Punktestand1"></p>
-<p id="Wurfanzahl1"></p>
+<img id = B1>
+<img id = B2>
+<p id="PS"></p>
+<p id="WZ"></p>
 <!-- Raised button with ripple -->
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+<button onclick="wuerfeln()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
     Würfeln!
 </button>
 
@@ -31,11 +33,11 @@ Anzahl an Würfen zu übertreffen...Es sei denn, es kommt ihm EINE Zahl in die Q
 
 
 <!-- Raised button with ripple -->
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+<button onclick="neuesSpiel()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
     Neues Spiel.
 </button>
 
-<h2>Auswertung:</h2>
+
 
 </body>
 </html>
