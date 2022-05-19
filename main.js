@@ -11,9 +11,33 @@ function wuerfeln(){
     {
         wuerfel1 = Math.floor(Math.random() * 6 + 1)
         wuerfel2 = Math.floor(Math.random() * 6 + 1)
+        switch (wuerfel1){
+            case 1 : document.getElementById("B1").src = "img/1.png";
+            break
+            case 2 : document.getElementById("B1").src = "img/2.png";
+            break
+            case 3 : document.getElementById("B1").src = "img/3.png";
+            break
+            case 4 : document.getElementById("B1").src = "img/4.png";
+            break
+            case 5 : document.getElementById("B1").src = "img/5.png";
+            break
+            case 6 : document.getElementById("B1").src = "img/6.png"
+        }
+        switch (wuerfel2){
+            case 1 : document.getElementById("B2").src = "img/1.png";
+            break
+            case 2 : document.getElementById("B2").src = "img/2.png";
+            break
+            case 3 : document.getElementById("B2").src = "img/3.png";
+            break
+            case 4 : document.getElementById("B2").src = "img/4.png";
+            break
+            case 5 : document.getElementById("B2").src = "img/5.png";
+            break
+            case 6 : document.getElementById("B2").src = "img/6.png"
+        }
         document.getElementById("W1").innerHTML = "Wurf 1: " + wuerfel1
-        document.getElementById("B1").src = "img/1.png"
-        document.getElementById("B2").src = "img/1.png"
         document.getElementById("W2").innerHTML = "Wurf 2: " + wuerfel2
         rundenzahl1 = rundenzahl1 + 1
         if (wuerfel1 + wuerfel2 === 7) {
@@ -28,6 +52,32 @@ function wuerfeln(){
     } else if (spielerAnDerReihe === 2){
         wuerfel1 = Math.floor(Math.random() * 6 + 1)
         wuerfel2 = Math.floor(Math.random() * 6 + 1)
+        switch (wuerfel1){
+            case 1 : document.getElementById("B1").src = "img/1.png";
+                break
+            case 2 : document.getElementById("B1").src = "img/2.png";
+                break
+            case 3 : document.getElementById("B1").src = "img/3.png";
+                break
+            case 4 : document.getElementById("B1").src = "img/4.png";
+                break
+            case 5 : document.getElementById("B1").src = "img/5.png";
+                break
+            case 6 : document.getElementById("B1").src = "img/6.png"
+        }
+        switch (wuerfel2){
+            case 1 : document.getElementById("B2").src = "img/1.png";
+                break
+            case 2 : document.getElementById("B2").src = "img/2.png";
+                break
+            case 3 : document.getElementById("B2").src = "img/3.png";
+                break
+            case 4 : document.getElementById("B2").src = "img/4.png";
+                break
+            case 5 : document.getElementById("B2").src = "img/5.png";
+                break
+            case 6 : document.getElementById("B2").src = "img/6.png"
+        }
         document.getElementById("W1").innerHTML = "Wurf 1: " + wuerfel1
         document.getElementById("W2").innerHTML = "Wurf 2: " + wuerfel2
         rundenzahl2 = rundenzahl2 + 1
@@ -74,4 +124,51 @@ function auswerten(){
         }
     }
     alert("Danke fürs mitmachen. Bitte Spiel neustarten.")
+}
+
+function botSpiel(){
+    if (spielerAnDerReihe === 1) {
+        wuerfel1 = Math.floor(Math.random() * 6 + 1)
+        wuerfel2 = Math.floor(Math.random() * 6 + 1)
+        switch (wuerfel1){
+            case 1 : document.getElementById("B1").src = "img/1.png";
+                break
+            case 2 : document.getElementById("B1").src = "img/2.png";
+                break
+            case 3 : document.getElementById("B1").src = "img/3.png";
+                break
+            case 4 : document.getElementById("B1").src = "img/4.png";
+                break
+            case 5 : document.getElementById("B1").src = "img/5.png";
+                break
+            case 6 : document.getElementById("B1").src = "img/6.png"
+        }
+        switch (wuerfel2){
+            case 1 : document.getElementById("B2").src = "img/1.png";
+                break
+            case 2 : document.getElementById("B2").src = "img/2.png";
+                break
+            case 3 : document.getElementById("B2").src = "img/3.png";
+                break
+            case 4 : document.getElementById("B2").src = "img/4.png";
+                break
+            case 5 : document.getElementById("B2").src = "img/5.png";
+                break
+            case 6 : document.getElementById("B2").src = "img/6.png"
+        }
+        document.getElementById("W1").innerHTML = "Wurf 1: " + wuerfel1
+        document.getElementById("W2").innerHTML = "Wurf 2: " + wuerfel2
+        rundenzahl1 = rundenzahl1 + 1
+        if (wuerfel1 + wuerfel2 === 7) {
+            spielerAnDerReihe = 2
+            alert("Spieler 2 ist an der Reihe!")
+            rundenzahl1 = rundenzahl1 - 1
+        } else {
+            punktestand1 = punktestand1 + wuerfel1 + wuerfel2
+            document.getElementById("PS").innerHTML = "Punktestand: " + punktestand1
+        }
+        document.getElementById("WZ").innerHTML = "Anzahl der Runde: " + rundenzahl1
+    }
+    setTimeout(1)
+
 }
