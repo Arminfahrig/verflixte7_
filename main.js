@@ -5,13 +5,10 @@ let punktestand2 = 0
 let spielerAnDerReihe = 1
 let rundenzahl1 = 0
 let rundenzahl2 = 0
+let gewinneS2 = 0
+let gewinneS1 = 0
+let rundeUnentschieden = 0
 
-if(wuerfel1 === 0){
-    document.getElementById("B1").src = "img/0.png"
-}
-if(wuerfel2 === 0){
-    document.getElementById("B2").src = "img/0.png"
-}
 function wuerfeln(){
     if(spielerAnDerReihe === 1)
     {
@@ -134,9 +131,7 @@ function neuesSpiel(){
 
 }
 
-let gewinneS2 = 0
-let gewinneS1 = 0
-let rundeUnentschieden = 0
+
 
 function auswerten(){
     if (punktestand1 < punktestand2){
