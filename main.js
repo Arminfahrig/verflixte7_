@@ -1,3 +1,4 @@
+//Intitialisierung der eigenen Variablen:
 let wuerfel1 = 0
 let wuerfel2 = 0
 let punktestand1 = 0
@@ -8,7 +9,7 @@ let rundenzahl2 = 0
 let gewinneS2 = 0
 let gewinneS1 = 0
 let rundeUnentschieden = 0
-
+// Funktion würfeln steuert den gesammten Spielverlauf, durch Knopfdruck ausgelöst, wird Spiel gestartet.
 function wuerfeln(){
     if(spielerAnDerReihe === 1)
     {
@@ -26,7 +27,7 @@ function wuerfeln(){
             case 5 : document.getElementById("B1").src = "img/5.png";
             break
             case 6 : document.getElementById("B1").src = "img/6.png";
-        }
+        }                            //für den Platzhalter des ersten Bildes, wird ein passendes Bild, entsprechend der Augenzahl eingefügt.
         switch (wuerfel2){
             case 1 : document.getElementById("B2").src = "img/1.png";
             break
@@ -39,9 +40,9 @@ function wuerfeln(){
             case 5 : document.getElementById("B2").src = "img/5.png";
             break
             case 6 : document.getElementById("B2").src = "img/6.png"
-        }
+        }                             //für den Platzhalter des ersten Bildes, wird ein passendes Bild, entsprechend der Augenzahl eingefügt.
         document.getElementById("W1").innerHTML = "Wurf 1: " + wuerfel1
-        document.getElementById("W2").innerHTML = "Wurf 2: " + wuerfel2
+        document.getElementById("W2").innerHTML = "Wurf 2: " + wuerfel2 //Würfelzahlen werden ausgegeben
         rundenzahl1 = rundenzahl1 + 1
         if (wuerfel1 + wuerfel2 === 7) {
             spielerAnDerReihe = 2
@@ -70,7 +71,7 @@ function wuerfeln(){
                 break
             case 0 :
                      document.getElementById("B1").src = "img/0.png"
-        }
+        }                                  //für den Platzhalter des ersten Bildes, wird ein passendes Bild, entsprechend der Augenzahl eingefügt.
         switch (wuerfel2){
             case 1 : document.getElementById("B2").src = "img/1.png";
                 break
@@ -86,7 +87,7 @@ function wuerfeln(){
                 break
             case 0 :
                      document.getElementById("B2").src = "img/0.png"
-        }
+        }                                 //für den Platzhalter des ersten Bildes, wird ein passendes Bild, entsprechend der Augenzahl eingefügt.
         document.getElementById("W1").innerHTML = "Wurf 1: " + wuerfel1
         document.getElementById("W2").innerHTML = "Wurf 2: " + wuerfel2
         rundenzahl2 = rundenzahl2 + 1
@@ -129,7 +130,8 @@ function neuesSpiel(){
 
         document.getElementById("B2").src = "img/0.png"
 
-}
+}              //Beim auslösen der Funktion neuesSpiel wird die Seite nicht neu geladen, sonder die Variablen werden zurückgesetzt.
+               //So wird die einbindung der Spielhistorie gewährleistet.
 
 
 
@@ -223,7 +225,8 @@ function botSpieltWeiter() {
             }
             document.getElementById("WZ").innerHTML = "Anzahl der Runde: " + rundenzahl1
         }
-            setTimeout(botSpiel, 1000)
+            if (spielerAnDerReihe === 1){setTimeout(botSpiel, 1000)  //Da der timeout in Milisekunden angegeben wird entspricht 1000 einer Sekunde.
+}
 }
 
     function botSpiel() {
@@ -234,4 +237,10 @@ function botSpieltWeiter() {
         }else{
             botSpieltWeiter()
         }
+    }
+
+
+    function botSchwerer(){
+    punktestand1 = punktestand1 + 20
+        document.getElementById("PS").innerHTML = "Punktestand: " + punktestand1
     }

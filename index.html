@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <title>verflixte 7</title>
     <script src="main.js"></script>
+    <link rel="stylesheet" href="main.css">
 
 </head>
 <body>
+<div style="text-align: center;">
 <h1>Trau dich und spiel die verflixte 7!</h1>
 <h3>Beschreibung:<br> Spieler 1 beginnt zu würfeln, ist die Summe der gewürfelten Augenzahlen nicht 7, wird diese seinem Punktestand gutgeschrieben. Wenn er möchte, kann er seine Runde beenden,
 oder so lang er will, weiterspielen. Es sei denn, er würfelt die VERFLIXTE 7. Dann ist Spieler 2 dran und muss versuchen, ihn mit höchstens der gleichen
@@ -15,8 +17,8 @@ Anzahl an Würfen zu übertreffen...Es sei denn, es kommt ihm EINE Zahl in die Q
 <p id="W1"></p>
 <p id="W2"></p>
 
-<img id = "B1" src="img/0.png" height="200" width="200" alt="Bild: Würfel 1">
-<img id = "B2" src="img/0.png" height="200" width="200" alt="Bild: Würfel 2">
+<img id = "B1" src="img/0.png" height="225" width="225" alt="Bild: Würfel 1">
+<img id = "B2" src="img/0.png" height="225" width="225" alt="Bild: Würfel 2">
 <p id="PS"></p>
 <p id="WZ"></p>
 <!-- Raised button with ripple -->
@@ -42,9 +44,16 @@ Anzahl an Würfen zu übertreffen...Es sei denn, es kommt ihm EINE Zahl in die Q
     Spiel mit dem Roboter!
 </button>
 
+<br>
+<h4>Willst du deinemSpiel zusätzliche Würze geben?</h4>
+<button onclick="botSchwerer()" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+    Gib deinem Gegner 20 Punkte vorsprung.
+</button>
+
 <h1>Spielhistorie:</h1>
-<p id="GS1">t</p>
-<p id="GS2">e</p>
-<p id="SU">st</p>
+<p id="GS1">Sobald du die erste Runde beendet hast, wird die hier die Spielhistorie angezeigt!</p>
+<p id="GS2"></p>
+<p id="SU"></p>
+</div>
 </body>
 </html>
