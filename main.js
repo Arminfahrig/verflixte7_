@@ -238,7 +238,7 @@ function botSpieltWeiter() {
             botSpieltWeiter()
         }
     }
-
+// Bot spielt, wenn der Quotient von punkten zu runden höher als 9 ist.
 
     function botSchwerer(){
     punktestand1 = punktestand1 + 20
